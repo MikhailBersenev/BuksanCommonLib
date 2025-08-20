@@ -15,7 +15,7 @@ public:
 private:
      void fPrepare(QString& lStrHostName, QString& lStrTimeStamp);
      void fSetUser(QString& strUser);
-     void fSetSignature(qint16& nSignature);
+     void fSetSignature(CEvent::nSignature& nSignature);
      void fAddFullLogInfo(QString& strInfo);
     bool fPost(QString& lStrHostName);
      /** @brief Main SQL query object for alert operations */

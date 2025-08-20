@@ -12,7 +12,7 @@ bool CSQLEventEngine::fSend(CEvent *pEvent)
     QString strHostName  = pEvent->fGetHostName();
     QString strTimeStamp = QString::number(pEvent->fGetTimeStamp());
     QString strUserName = pEvent->fGetUserName();
-    qint16 nSignature = pEvent->fGetSignature();
+    CEvent::nSignature nSignature = pEvent->fGetSignature();
     this->fPrepare(strHostName, strTimeStamp);
     this->fSetUser(strUserName);
     this->fSetSignature(nSignature);
@@ -43,9 +43,10 @@ void CSQLEventEngine::fSetUser(QString& strUser)
     m_MainQuery.bindValue(":user", m_FindItemQuery.value(0).toInt());
     m_strFullData = strUser;
 }
-void CSQLEventEngine::fSetSignature(qint16& nSignature)
+void CSQLEventEngine::fSetSignature(CEvent::nSignature& nSignature)
 {
-    m_MainQuery.bindValue(":signature", nSignature);
+    QVariant Signature = static_cast <qint16>(nSignature);
+    m_MainQuery.bindValue(":signature", Signature);
 
 }
 void CSQLEventEngine::fAddFullLogInfo(QString& strInfo)
