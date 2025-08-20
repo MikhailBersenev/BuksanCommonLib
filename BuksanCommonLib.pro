@@ -12,6 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     EventEngine/CEventEngine.cpp \
+    EventEngine/CEventSender.cpp \
     EventEngine/events/CEvent.cpp \
     EventEngine/CSQLEventEngine.cpp \
     cbuksancommonlib.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     BuksanCommonLib_global.h \
     EventEngine/CEventEngine.h \
+    EventEngine/CEventSender.h \
     EventEngine/events/CEvent.h \
     EventEngine/CSQLEventEngine.h \
     cbuksancommonlib.h \
