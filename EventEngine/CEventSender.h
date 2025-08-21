@@ -9,8 +9,10 @@ class CEventSender : public QObject
 {
     Q_OBJECT
 public:
-    explicit CEventSender(QObject *parent = nullptr,  QList<CEventEngine*> *vEngines = nullptr);
+    explicit CEventSender(QObject *parent = nullptr);
+    ~CEventSender();
     bool fSendEvent(CEvent* pEvent);
+    bool fAddEngine(CEventEngine* pEngine);
 private:
     QList<CEventEngine*> *m_vEngines;
 signals:

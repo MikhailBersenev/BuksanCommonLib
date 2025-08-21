@@ -4,12 +4,14 @@
 #include <QObject>
 
 #include "events/CEvent.h"
+class CEventSender;
 
 class CEventEngine : public QObject
 {
     Q_OBJECT
 public:
     virtual bool fSend(CEvent* pEvent) = 0;
+    virtual bool fSubscribe(CEventSender* pSender);
 protected:
     explicit CEventEngine(QObject *parent = nullptr);
 

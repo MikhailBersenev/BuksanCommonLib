@@ -1,10 +1,14 @@
 #include "CEventSender.h"
 
-CEventSender::CEventSender(QObject *parent, QList<CEventEngine*> *vEngines)
-    : QObject{parent},
-    m_vEngines{vEngines}
+CEventSender::CEventSender(QObject *parent)
+    : QObject{parent}
 {
+    m_vEngines = new QList<CEventEngine*>;
+}
 
+CEventSender::~CEventSender()
+{
+    if(m_vEngines) delete m_vEngines;
 }
 
 bool CEventSender::fSendEvent(CEvent *pEvent)
@@ -15,4 +19,12 @@ bool CEventSender::fSendEvent(CEvent *pEvent)
     }
 
     return bRes;
+}
+
+bool CEventSender::fAddEngine(CEventEngine *pEngine)
+{
+    if(!pEngine)
+        return false;
+    m_vEngines->append(pEngine);
+    return true;
 }
