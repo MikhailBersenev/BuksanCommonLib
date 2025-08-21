@@ -5,19 +5,20 @@
 
 #include "CEventEngine.h"
 
-class CSQLEventEngine : public CEventEngine
+class BUKSANCOMMONLIB_EXPORT CSQLEventEngine : public CEventEngine
 {
 public:
     explicit CSQLEventEngine(QObject *parent = nullptr);
     virtual bool fSend(CEvent* pEvent) override;
+    virtual QString fGetNameString()  override;
 
 
 private:
-     void fPrepare(QString& lStrHostName, QString& lStrTimeStamp);
+     void fPrepare(QString& lStrHostName, QString& lStrTimeStamp, QTime& lTime, QDate& lDate);
      void fSetUser(QString& strUser);
      void fSetSignature(CEvent::nSignature& nSignature);
      void fAddFullLogInfo(QString& strInfo);
-    bool fPost(QString& lStrHostName);
+    bool fPost(QString& lStrHostName, QString& lStrFullLog);
      /** @brief Main SQL query object for alert operations */
      QSqlQuery m_MainQuery;
 

@@ -57,7 +57,7 @@ QString CEvent::fGetFullLog()
 void CEvent::fSetUserName(QString &lStrUserName)
 {
     m_strUserName = lStrUserName;
-    m_strFullLog += m_strUserName + " ";
+    m_strFullLog += " " + m_strUserName + " ";
 }
 
 void CEvent::fSetHostName(QString &lStrHostName)

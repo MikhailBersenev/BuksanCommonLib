@@ -1,11 +1,12 @@
 #ifndef CEVENT_H
 #define CEVENT_H
 
+#include "BuksanCommonLib_global.h"
 #include <QObject>
 #include <QTime>
 #include <QDate>
 
-class CEvent : public QObject
+class BUKSANCOMMONLIB_EXPORT CEvent : public QObject
 {
     Q_OBJECT
 public:

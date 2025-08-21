@@ -1,6 +1,5 @@
 #include "CDatabaseConnectionPSQL.h"
 #include <QDebug>
-
 CDatabaseConnectionPSQL::CDatabaseConnectionPSQL(QObject *parent) : CDatabaseConnection(parent)
 {
 }
@@ -23,15 +22,7 @@ bool CDatabaseConnectionPSQL::fCreateConnection(SDBConnection& lConnection)
     else
     {
         m_db.driver()->subscribeToNotification("insert_users_notf");
-        // Временно закомментировано - код связанный с CSendAlert
-        /*
-        m_pSendAlert = new CSendAlert; //Создание динамического объекта посылателя событий
-        m_pSendAlert->fPrepare(); //Подготовка события
-        m_pSendAlert->fSetUser(lConnection.strUserName);
-        m_pSendAlert->fSetSignature(1);                 //Присвоение сигнатуры события
-        m_pSendAlert->fSend();                          //Отправка события
-        delete m_pSendAlert; //Удаление динамического объекта посылателя сообщений
-        */
+
         return true;
     }
 }

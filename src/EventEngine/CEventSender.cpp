@@ -1,5 +1,5 @@
 #include "CEventSender.h"
-
+#include <QDebug>
 CEventSender::CEventSender(QObject *parent)
     : QObject{parent}
 {
@@ -26,5 +26,6 @@ bool CEventSender::fAddEngine(CEventEngine *pEngine)
     if(!pEngine)
         return false;
     m_vEngines->append(pEngine);
+    qDebug() << pEngine->fGetNameString() << "successfully addded";
     return true;
 }

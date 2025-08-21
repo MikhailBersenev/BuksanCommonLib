@@ -15,6 +15,26 @@ SOURCES += \
     EventEngine/CEventSender.cpp \
     EventEngine/events/CEvent.cpp \
     EventEngine/CSQLEventEngine.cpp \
+    EventEngine/events/cameraEvents/CCameraEvent.cpp \
+    EventEngine/events/cameraEvents/CCameraRecordStartEvent.cpp \
+    EventEngine/events/cameraEvents/CCameraScreenshotEvent.cpp \
+    EventEngine/events/cameraEvents/CCameraStopRecordEvent.cpp \
+    EventEngine/events/cameraEvents/CCameraLostConnectionEvent.cpp \
+    EventEngine/events/systemEvents/CSystemEvent.cpp \
+    EventEngine/events/securityEvents/CSecurityEvent.cpp \
+    EventEngine/events/securityEvents/CUserAuthEvent.cpp \
+    EventEngine/events/securityEvents/CUserRegisterEvent.cpp \
+    EventEngine/events/securityEvents/CUserChangePasswordEvent.cpp \
+    EventEngine/events/securityEvents/CUserBanAccountEvent.cpp \
+    EventEngine/events/securityEvents/CUserDeleteAccountEvent.cpp \
+    EventEngine/events/securityEvents/CUserChangeUserNameEvent.cpp \
+    EventEngine/events/securityEvents/CUserLogoutAccountEvent.cpp \
+    EventEngine/events/securityEvents/CMandatoryMarkChangedEvent.cpp \
+    EventEngine/events/securityEvents/CUserUnlockAccountEvent.cpp \
+    EventEngine/events/serverEvents/CServerEvent.cpp \
+    EventEngine/events/serverEvents/CServerConnectEvent.cpp \
+    EventEngine/events/serverEvents/CInternetLostConnectionEvent.cpp \
+    EventEngine/events/serverEvents/CInternetConnectionRecoveredEvent.cpp \
     cbuksancommonlib.cpp \
     db/CDatabaseConnection.cpp \
     db/CDatabaseConnectionPSQL.cpp
@@ -25,6 +45,26 @@ HEADERS += \
     EventEngine/CEventSender.h \
     EventEngine/events/CEvent.h \
     EventEngine/CSQLEventEngine.h \
+    EventEngine/events/cameraEvents/CCameraEvent.h \
+    EventEngine/events/cameraEvents/CCameraRecordStartEvent.h \
+    EventEngine/events/cameraEvents/CCameraScreenshotEvent.h \
+    EventEngine/events/cameraEvents/CCameraStopRecordEvent.h \
+    EventEngine/events/cameraEvents/CCameraLostConnectionEvent.h \
+    EventEngine/events/systemEvents/CSystemEvent.h \
+    EventEngine/events/securityEvents/CSecurityEvent.h \
+    EventEngine/events/securityEvents/CUserAuthEvent.h \
+    EventEngine/events/securityEvents/CUserRegisterEvent.h \
+    EventEngine/events/securityEvents/CUserChangePasswordEvent.h \
+    EventEngine/events/securityEvents/CUserBanAccountEvent.h \
+    EventEngine/events/securityEvents/CUserDeleteAccountEvent.h \
+    EventEngine/events/securityEvents/CUserChangeUserNameEvent.h \
+    EventEngine/events/securityEvents/CUserLogoutAccountEvent.h \
+    EventEngine/events/securityEvents/CMandatoryMarkChangedEvent.h \
+    EventEngine/events/securityEvents/CUserUnlockAccountEvent.h \
+    EventEngine/events/serverEvents/CServerEvent.h \
+    EventEngine/events/serverEvents/CServerConnectEvent.h \
+    EventEngine/events/serverEvents/CInternetLostConnectionEvent.h \
+    EventEngine/events/serverEvents/CInternetConnectionRecoveredEvent.h \
     cbuksancommonlib.h \
     db/CDatabaseConnection.h \
     db/CDatabaseConnectionPSQL.h
@@ -33,10 +73,3 @@ HEADERS += \
 unix {
     target.path = $$OUT_PWD/install/lib
 }
-
-# Копирование заголовочных файлов в include директорию
-copy_headers.commands = $$system(mkdir -p $$OUT_PWD/include/db && cp BuksanCommonLib_global.h $$OUT_PWD/include/ && cp cbuksancommonlib.h $$OUT_PWD/include/ && cp db/CDatabaseConnection.h $$OUT_PWD/include/db/ && cp db/CDatabaseConnectionPSQL.h $$OUT_PWD/include/db/)
-QMAKE_EXTRA_TARGETS += copy_headers
-POST_TARGETDEPS += copy_headers
-
-!isEmpty(target.path): INSTALLS += target

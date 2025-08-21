@@ -1,5 +1,7 @@
 #include "CEventEngine.h"
 #include "CEventSender.h"
+#include <QDebug>
+
 bool CEventEngine::fSubscribe(CEventSender *pSender)
 {
     if(!pSender)

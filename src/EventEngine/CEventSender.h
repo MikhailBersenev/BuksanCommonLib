@@ -5,7 +5,7 @@
 
 #include "CEventEngine.h"
 
-class CEventSender : public QObject
+class BUKSANCOMMONLIB_EXPORT CEventSender : public QObject
 {
     Q_OBJECT
 public:
