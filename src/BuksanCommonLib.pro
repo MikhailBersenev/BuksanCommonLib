@@ -35,6 +35,8 @@ SOURCES += \
     EventEngine/events/serverEvents/CServerConnectEvent.cpp \
     EventEngine/events/serverEvents/CInternetLostConnectionEvent.cpp \
     EventEngine/events/serverEvents/CInternetConnectionRecoveredEvent.cpp \
+    MRBAC/objects/CSecLabeledObject.cpp \
+    MRBAC/objects/CSecurityGroup.cpp \
     cbuksancommonlib.cpp \
     db/CDatabaseConnection.cpp \
     db/CDatabaseConnectionPSQL.cpp
@@ -65,6 +67,8 @@ HEADERS += \
     EventEngine/events/serverEvents/CServerConnectEvent.h \
     EventEngine/events/serverEvents/CInternetLostConnectionEvent.h \
     EventEngine/events/serverEvents/CInternetConnectionRecoveredEvent.h \
+    MRBAC/objects/CSecLabeledObject.h \
+    MRBAC/objects/CSecurityGroup.h \
     cbuksancommonlib.h \
     db/CDatabaseConnection.h \
     db/CDatabaseConnectionPSQL.h
@@ -73,3 +77,4 @@ HEADERS += \
 unix {
     target.path = $$OUT_PWD/install/lib
 }
+

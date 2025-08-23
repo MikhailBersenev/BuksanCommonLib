@@ -13,7 +13,6 @@ bool CDatabaseConnectionPSQL::fCreateConnection(SDBConnection& lConnection)
     m_db.setUserName(lConnection.strUserName);   //Пользователь
     m_db.setPassword(lConnection.strPassword);   //Пароль
     qDebug() << "UserName " << lConnection.strUserName << " " << lConnection.strDBName;
-    
     //Проверка на возможность соединения и соединение
     if(!m_db.open()) {
         qDebug() << "Unable to create connection" << m_db.lastError();
@@ -22,7 +21,7 @@ bool CDatabaseConnectionPSQL::fCreateConnection(SDBConnection& lConnection)
     else
     {
         m_db.driver()->subscribeToNotification("insert_users_notf");
-
+        qDebug() << "PostgreSQL connection established " << m_db.hostName();
         return true;
     }
 }
