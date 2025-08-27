@@ -4,7 +4,6 @@
 #include "CDatabaseConnection.h"
 #include "BuksanCommonLib_global.h"
 
-// class CSendAlert; // Временно закомментировано
 /**
  * @brief Database connection and management class
  * 
@@ -39,9 +38,6 @@ public:
      */
     bool fCreateConnection(SDBConnection& lConnection) override;
     
-    // /** @brief Alert system for logging database connection events */
-    // CSendAlert *m_pSendAlert; // Временно закомментировано
-
 private slots:
 
 signals:

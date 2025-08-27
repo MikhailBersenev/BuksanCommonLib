@@ -7,6 +7,7 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES +=  tst_maintest.cpp \
+    EventEngine/test_EventEngine.cpp \
     db/test_CDatabaseConnection.cpp
 
 
@@ -18,4 +19,5 @@ INCLUDEPATH += $$PWD/../../src
 DEPENDPATH += $$PWD/../../src
 
 HEADERS += \
+    EventEngine/test_EventEngine.h \
     db/test_CDatabaseConnection.h

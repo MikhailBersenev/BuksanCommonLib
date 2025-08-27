@@ -1,6 +1,8 @@
 #include <QCoreApplication>
 #include <QtTest>
 #include "db/test_CDatabaseConnection.h"
+
+
 // add necessary includes here
 #if 0
 class MainTest : public QObject
@@ -29,6 +31,7 @@ void MainTest::test_case1() {
 
 }
 #endif
+
 
 QTEST_MAIN(test_CDatabaseConnection)
 

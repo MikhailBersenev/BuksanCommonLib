@@ -38,6 +38,7 @@ SOURCES += \
     MRBAC/objects/CSecLabeledObject.cpp \
     MRBAC/objects/CSecurityGroup.cpp \
     cbuksancommonlib.cpp \
+    core/CCamera.cpp \
     db/CDatabaseConnection.cpp \
     db/CDatabaseConnectionPSQL.cpp
 
@@ -70,6 +71,7 @@ HEADERS += \
     MRBAC/objects/CSecLabeledObject.h \
     MRBAC/objects/CSecurityGroup.h \
     cbuksancommonlib.h \
+    core/CCamera.h \
     db/CDatabaseConnection.h \
     db/CDatabaseConnectionPSQL.h
 
