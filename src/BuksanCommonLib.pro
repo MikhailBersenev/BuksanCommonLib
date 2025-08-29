@@ -42,7 +42,8 @@ SOURCES += \
     core/CCamera.cpp \
     core/CMediaFile.cpp \
     db/CDatabaseConnection.cpp \
-    db/CDatabaseConnectionPSQL.cpp
+    db/CDatabaseConnectionPSQL.cpp \
+    utils/CStringUtils.cpp
 
 HEADERS += \
     BuksanCommonLib_global.h \
@@ -77,7 +78,8 @@ HEADERS += \
     core/CCamera.h \
     core/CMediaFile.h \
     db/CDatabaseConnection.h \
-    db/CDatabaseConnectionPSQL.h
+    db/CDatabaseConnectionPSQL.h \
+    utils/CStringUtils.h
 
 # Default rules for deployment.
 unix {
