@@ -35,10 +35,12 @@ SOURCES += \
     EventEngine/events/serverEvents/CServerConnectEvent.cpp \
     EventEngine/events/serverEvents/CInternetLostConnectionEvent.cpp \
     EventEngine/events/serverEvents/CInternetConnectionRecoveredEvent.cpp \
+    MRBAC/auth/CUser.cpp \
     MRBAC/objects/CSecLabeledObject.cpp \
     MRBAC/objects/CSecurityGroup.cpp \
     cbuksancommonlib.cpp \
     core/CCamera.cpp \
+    core/CMediaFile.cpp \
     db/CDatabaseConnection.cpp \
     db/CDatabaseConnectionPSQL.cpp
 
@@ -68,10 +70,12 @@ HEADERS += \
     EventEngine/events/serverEvents/CServerConnectEvent.h \
     EventEngine/events/serverEvents/CInternetLostConnectionEvent.h \
     EventEngine/events/serverEvents/CInternetConnectionRecoveredEvent.h \
+    MRBAC/auth/CUser.h \
     MRBAC/objects/CSecLabeledObject.h \
     MRBAC/objects/CSecurityGroup.h \
     cbuksancommonlib.h \
     core/CCamera.h \
+    core/CMediaFile.h \
     db/CDatabaseConnection.h \
     db/CDatabaseConnectionPSQL.h
 
