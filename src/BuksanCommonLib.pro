@@ -15,11 +15,11 @@ SOURCES += \
     EventEngine/CEventSender.cpp \
     EventEngine/events/CEvent.cpp \
     EventEngine/CSQLEventEngine.cpp \
-    EventEngine/events/cameraEvents/CCameraEvent.cpp \
-    EventEngine/events/cameraEvents/CCameraRecordStartEvent.cpp \
-    EventEngine/events/cameraEvents/CCameraScreenshotEvent.cpp \
-    EventEngine/events/cameraEvents/CCameraStopRecordEvent.cpp \
-    EventEngine/events/cameraEvents/CCameraLostConnectionEvent.cpp \
+    EventEngine/events/salesEvents/CSalesEvent.cpp \
+    EventEngine/events/salesEvents/CNewItemInReceiptEvent.cpp \
+    EventEngine/events/salesEvents/CExportReceiptToFileEvent.cpp \
+    EventEngine/events/salesEvents/CShiftOpeningEvent.cpp \
+    EventEngine/events/salesEvents/CShiftClosingEvent.cpp \
     EventEngine/events/systemEvents/CSystemEvent.cpp \
     EventEngine/events/securityEvents/CSecurityEvent.cpp \
     EventEngine/events/securityEvents/CUserAuthEvent.cpp \
@@ -51,11 +51,11 @@ HEADERS += \
     EventEngine/CEventSender.h \
     EventEngine/events/CEvent.h \
     EventEngine/CSQLEventEngine.h \
-    EventEngine/events/cameraEvents/CCameraEvent.h \
-    EventEngine/events/cameraEvents/CCameraRecordStartEvent.h \
-    EventEngine/events/cameraEvents/CCameraScreenshotEvent.h \
-    EventEngine/events/cameraEvents/CCameraStopRecordEvent.h \
-    EventEngine/events/cameraEvents/CCameraLostConnectionEvent.h \
+    EventEngine/events/salesEvents/CSalesEvent.h \
+    EventEngine/events/salesEvents/CNewItemInReceiptEvent.h \
+    EventEngine/events/salesEvents/CExportReceiptToFileEvent.h \
+    EventEngine/events/salesEvents/CShiftOpeningEvent.h \
+    EventEngine/events/salesEvents/CShiftClosingEvent.h \
     EventEngine/events/systemEvents/CSystemEvent.h \
     EventEngine/events/securityEvents/CSecurityEvent.h \
     EventEngine/events/securityEvents/CUserAuthEvent.h \

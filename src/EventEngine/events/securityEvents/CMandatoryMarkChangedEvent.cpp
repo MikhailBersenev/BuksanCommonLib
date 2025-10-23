@@ -3,5 +3,5 @@
 CMandatoryMarkChangedEvent::CMandatoryMarkChangedEvent(QObject *parent)
     : CSecurityEvent{parent}
 {
-    m_nSignature = nSignature::MandaroryMarkChanged;
+    m_nSignature = nSignature::MandatoryMarkChanged;
 }

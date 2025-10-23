@@ -12,7 +12,7 @@ class BUKSANCOMMONLIB_EXPORT CEvent : public QObject
 public:
     // Общие типы событий (из signatureTypes.csv)
     enum class nSignatureType : int {
-        Camera      = 1,  // Событие видеокамеры
+        Sales       = 1,  // Событие продажи
         System      = 2,  // Системное событие
         Security    = 3,  // Событие безопасности
         Server      = 4   // Событие сервера
@@ -20,23 +20,23 @@ public:
 
     // Конкретные события (из signature.csv)
     enum class nSignature : int {
-        ServerConnect       = 1,  // Подключение к серверу
-        UserAuth            = 2,  // Авторизация пользователя
-        UserRegister        = 3,  // Регистрация пользователя
-        CameraStartRecord   = 4,  // Старт записи с камеры
-        CameraScreenshot    = 5,   // Создание скриншота с камеры
-        CameraStopRecord    = 6,   // Стоп записи с камеры
-        CameraLostConnection = 7, //Потеряно соединение с камерой
-        UserChangePassword   = 8, //Изменение пароля пользователя
-        UserBanAccount       = 9, //Блокировка пользователя
-        UserDeleteAccount    = 10, //Удаление пользователя
-        UserChangeUserName   = 11, //Изменение имени пользователя
-        UserLogoutAccount    = 12, //Выход из учетной записи
-        InternetLostConnection = 13, //Потеряно соединение с Интернетом
-        InternetConnectionRecovered = 14, //Соединение с Интернетом восстановлено
-        MandaroryMarkChanged   = 15, //Изменение мандатной метки
-        UserUnlockAccount      = 16, //Разблокировка пользователя
-        NullValue              = 17
+        ServerConnect               = 1,  // Подключение к серверу
+        UserAuth                    = 2,  // Авторизация пользователя
+        UserRegister                = 3,  // Регистрация пользователя
+        NewItemInReceipt            = 4,  // Новый товар в чеке
+        ExportReceiptToFile         = 5,  // Экспорт чека в файл
+        ShiftOpening                = 6,  // Открытие смены
+        ShiftClosing                = 7,  // Закрытие смены
+        UserChangePassword          = 8,  // Изменение пароля пользователя
+        UserBanAccount              = 9,  // Блокировка пользователя
+        UserDeleteAccount           = 10, // Удаление пользователя
+        UserChangeUserName          = 11, // Изменение имени пользователя
+        UserLogoutAccount           = 12, // Выход из учетной записи
+        InternetLostConnection      = 13, // Потеряно соединение с Интернетом
+        InternetConnectionRecovered  = 14, // Соединение с Интернетом восстановлено
+        MandatoryMarkChanged        = 15, // Изменение мандатной метки
+        UserUnlockAccount           = 16, // Разблокировка пользователя
+        NullValue                   = 17  // NULL
     };
     QString  fGetUserName();
     QTime    fGetTime();
